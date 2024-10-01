@@ -9,6 +9,10 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
