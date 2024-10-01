@@ -6,6 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: Cloudflare
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
